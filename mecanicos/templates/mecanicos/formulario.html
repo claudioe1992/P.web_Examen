@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block Formulario %}{% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="formulario.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/formulario.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="avatar">
+            <img src="{% static 'img/logo.jpeg' %}" alt=""/>
+        </div>
+        <form id="registroForm" onsubmit="return validarFormulario()" action="exito.html">
+            <h2>Registro de Usuario</h2>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <div class="error" id="error-nombre"></div>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+                <div class="error" id="error-apellido"></div>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <div class="error" id="error-correo"></div>
+            </div>
+            <div class="form-group">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" required>
+                <div class="error" id="error-contraseña"></div>
+            </div>
+            <div class="form-group">
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" required>
+                <div class="error" id="error-numero"></div>
+            </div>
+            <div class="form-group">
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+                <div class="error" id="error-ciudad"></div>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    {% block content %}
+{% endblock %}
+    
+    <script src="{% static 'formulario.js' %}"></script>
+</body>
+</html>

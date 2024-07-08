@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block Exito %}{% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <!---Links: CSS | Bootstrap | Iconos de Bootstrap-->
+    <link rel="stylesheet" href="trabajo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/trabajo.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo">
+                <img src="{% static 'img\logo.jpeg' %}" alt="taller rayo maken">
+            </a>
+            <h3> Cambio de Caja de Cambio </h3>
+        </div>
+    </header>
+    <!---COMIENZO DEL NAVBAR (5 BOTONES)-->
+    <div class="menu">
+        <a href="trabajo2.html">Siguente</a>
+        <a href="trabajo1.html">Volver</a>
+        <a href="principal.html">Registros</a>
+        <div class="search-container">
+            <form action="/buscar">
+                <input type="text" placeholder="Buscar..." name="buscar">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <!---FIN DEL NAVBAR-->
+    <section class="services">
+        <div class="container">
+            <div class="row">
+                <center>
+                    <h3> Trabajo Realizado - Cambio de Caja de Cambio </h3>
+                    <br>
+                </center>
+                <br>
+                <br>
+                <hr>
+                <h4>Equipo a Cargo: Nombre Mecanico</h4>
+                <hr>
+                <h4>Fecha de realizacion: 12 de Mayo de 2024</h4>
+                <br>
+                <br>
+                <br>
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="card text-white text-center bg-car1 pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Materiales Utilizados</h3>
+                                <img src="{% static 'img/pr7.png' %}" alt="">
+                                <p>
+                                    Llantas RAYS, acompañadas de una suspension ENKEI de alta calidad
+                                    importada desde Alemania, utilizamos diversas herramientas...
+                                    <hr>
+                                    Llantas RAYS, acompañadas de una suspension ENKEI de alta calidad
+                                    importada desde Alemania, utilizamos diversas herramientas...
+                                    utilizamos diversas herramientas...
+
+                                </p>
+                            <button class="btn bg-primary text-white">Leer Más</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="card text-white text-center bg-car2 pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Costo total</h3>
+                            <img src="{% static 'img/pr3.png' %}" alt="">
+                            <p>
+                                - Mantencion al Vehiculo: $15.000
+                                <hr>
+                                - Cambio de Llantas Delanteras: $10.000
+                                <hr>
+                                - Cambio de Llantas Traseras: $15.000
+                                <hr>
+                                - Mantenimiento de Aceite: $5000
+                                <hr>
+                                - Cambio de Suspension: $80.000
+
+                            </p>
+                            <button class="btn bg-primary text-white">Leer Más</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="card text-white text-center bg-car3 pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Diagnostico del Mecanico</h3>
+                            <img src="{% static 'img/mec3.png' %}" alt="">
+                            <p>
+                                Nombre mecanico: Daniel Alvarez
+                                Especialidad: Suspension y Dirección
+                                "Se reemplazó la suspension que estaba"
+                                Nombre mecanico: Daniel Alvarez
+                                Especialidad: Suspension y Dirección
+                                <hr>
+                                "Se reemplazó la suspension que estaba"
+                                Nombre mecanico: Daniel Alvarez
+                                Especialidad: Suspension y Dirección
+                                "Se reemplazó la suspension que estaba"
+                            </p>
+                            <button class="btn bg-primary text-white">Leer Más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <center><h3>Registro del Trabajo realizado</h3></center>
+    <hr>
+    <center><img src="{% static 'img/trabajo1.jpg' %}" alt=""></center>
+    <hr>
+    {% block content %}
+{% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

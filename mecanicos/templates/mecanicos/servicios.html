@@ -1,0 +1,365 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block Mecanicos %}{% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="servicios.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/servicios.css' %}">
+
+</head>
+
+<body> <!--INICIO DEL NAVBAR-->
+    <header>
+        <div class="logo">
+            <a href="#" class="logo">
+                <img src="{% static 'img\logo.jpeg' %}" alt="taller rayo maken">
+            </a>
+            <h3> Servicios </h3>
+        </div>
+    </header>
+    <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="formulario.html">Registrate</a>
+        <div class="search-container">
+            <form action="/buscar">
+                <input type="text" placeholder="Buscar..." name="buscar">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
+    </div> <!--FIN DEL NAVBAR-->
+    <section class="services">
+        <div class="container">
+            <div class="row">
+                <center>
+                    <h3>Servicios de Especialidad</h3>
+                </center>
+                <br>
+                <br>
+                <br> <!--INICIO DE LAS CARDS-->
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="card text-white text-center bg-car1 pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Electronica Automotriz</h3>
+                            <p>
+                                En nuestro taller mecánico, nos especializamos en diagnósticos y reparaciones de
+                                sistemas electrónicos para vehículos.
+                                Desde el control de la inyección de combustible hasta la gestión de la computadora a
+                                bordo, estamos equipados para abordar todos sus problemas
+                            </p>
+                            <button class="btn bg-primary text-white">Leer Más</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="card text-white text-center bg-car2 pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Cajas de Cambio</h3>
+                            <p>
+                                Las cajas de cambio automáticas son una parte integral de la experiencia de conducción
+                                de muchos vehículos modernos.
+                                En nuestro taller, ofrecemos servicios de mantenimiento y reparación de cajas de cambio
+                                automáticas para garantizar cambios suaves y eficientes.
+                            </p>
+                            <button class="btn bg-primary text-white">Leer Más</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="card text-white text-center bg-car3 pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Suspension y Direccion</h3>
+                            <p>
+                                La suspensión y dirección son componentes críticos para el manejo y la seguridad de tu
+                                vehículo. En nuestro taller, ofrecemos servicios de ajuste, reparación y mantenimiento
+                                de suspensión y dirección para garantizar un viaje suave y seguro.
+                            </p>
+                            <button class="btn bg-primary text-white">Leer Más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="row">
+                <center>
+                    <h3>Servicios de Mantenimiento</h3>
+                </center>
+                <br>
+                <br>
+                <br>
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="card text-white text-center bg-car3 pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title"> Mecanica General </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Sit voluptatibus laboriosam quaerat quibusdam consectetur sapient
+                                ex modi reprehenderit iureveniam rem blanditiis?
+                            </p>
+                            <button class="btn bg-primary text-white">Leer Más</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="card text-white text-center bg-car2 pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title"> Combustible </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Sit voluptatibus laboriosam quaerat quibusdam consectetur sapient
+                                ex modi reprehenderit iureveniam rem blanditiis?
+                            </p>
+                            <button class="btn bg-primary text-white">Leer Más</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="card text-white text-center bg-car1 pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title"> Pintura y Carroceria </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Sit voluptatibus laboriosam quaerat quibusdam consectetur sapient
+                                ex modi reprehenderit iureveniam rem blanditiis?
+                            </p>
+                            <button class="btn bg-primary text-white">Leer Más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="secction-header text-center pb-5">
+                        <h2>Productos</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Sit voluptatibus laboriosam quaerat quibusdam consectetur sapient
+                            ex modi reprehenderit iureveniam rem blanditiis?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Sit voluptatibus laboriosam quaerat quibusdam consectetur sapient
+                            ex modi reprehenderit iureveniam rem blanditiis?
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/pr1.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Llantas Brembo</h5>
+                            <p>
+                                Nuestras llantas Brembo ofrecen un rendimiento excepcional en la carretera y la pista.
+                                Diseñadas con tecnología de vanguardia y materiales de alta calidad, proporcionan un
+                                agarre superior y una respuesta precisa en cualquier condición.
+                            </p>
+                            <a href="#" class="btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/pr2.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Llantas O.Z</h5>
+                            <p>
+                                Nuestras llantas O.Z ofrecen un rendimiento excepcional en la carretera y la pista.
+                                Diseñadas con tecnología de vanguardia y materiales de alta calidad, proporcionan un
+                                agarre superior y una respuesta precisa en cualquier condición.
+                            </p>
+                            <a href="#" class="btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/pr3.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Volante SS</h5>
+                            <p>
+                                Nuestras llantas Volante SS ofrecen un rendimiento excepcional en la carretera y la
+                                pista.
+                                Diseñadas con tecnología de vanguardia y materiales de alta calidad, proporcionan un
+                                agarre superior y una respuesta precisa en cualquier condición.
+                            </p>
+                            <a href="#" class="btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/pr4.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Motor NAVISTAR</h5>
+                            <p>
+                                El motor Navistar es un símbolo de potencia y confiabilidad en la industria automotriz.
+                                Diseñado con tecnología de punta y años de experiencia en ingeniería, este motor ofrece
+                                un rendimiento excepcional en términos de potencia.
+                            </p>
+                            <a href="#" class="btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/pr5.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Llantas RAYZ</h5>
+                            <p>
+                                Nuestras llantas RAYZ ofrecen un rendimiento excepcional en la carretera y la pista.
+                                Diseñadas con tecnología de vanguardia y materiales de alta calidad, proporcionan un
+                                agarre superior y una respuesta precisa en cualquier condición.
+                            </p>
+                            <a href="#" class="btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/pr6.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Herramienta</h5>
+                            <p>
+                                Nuestra herramienta es una solución integral para tus necesidades de mantenimiento y
+                                reparación vehicular. Con una interfaz intuitiva y funciones avanzadas, nuestra
+                                herramienta simplifica el proceso de diagnóstico.
+                            </p>
+                            <a href="#" class="btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/pr7.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Llantas Toyo-Tires</h5>
+                            <p>
+                                Nuestras llantas TT ofrecen un rendimiento excepcional en la carretera y la pista.
+                                Diseñadas con tecnología de vanguardia y materiales de alta calidad, proporcionan un
+                                agarre superior y una respuesta precisa en cualquier condición.
+                            </p>
+                            <a href="#" class="btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/pr8.png'%}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Llantas ENKEI</h5>
+                            <p>
+                                Nuestras llantas ENKEI ofrecen un rendimiento excepcional en la carretera y la pista.
+                                Diseñadas con tecnología de vanguardia y materiales de alta calidad, proporcionan un
+                                agarre superior y una respuesta precisa en cualquier condición.
+                            </p>
+                            <a href="#" class="btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!--FIN DE LAS CARDS-->
+    <section class="section-icons">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4 box-icons">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-airplane"></i>
+                        <div class="ms-4">
+                            <h3>Envío Gratis</h3>
+                            <p>
+                                Los productos de nuestra tienda cuentan con
+                                envío gratuito a todas las regiones de nuestro país,
+                                compras al por mayor, cuentan con descuentos especiales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4 box-icons">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-cash-coin"></i>
+                        <div class="ms-4">
+                            <h3>Reembolso</h3>
+                            <p>
+                                Se aceptan reembolsos, siempre y cuando se tenga el
+                                comprobante fisico de compra o boleta electronica de
+                                pago realizado, contamos con garantía de 1 año.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 box-icons">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-gift-fill"></i>
+                        <div class="ms-4">
+                            <h3>Servicio a Domilicio</h3>
+                            <p>
+                                Además de realizar pedidos de nuestros productos, contamos
+                                con servicios de trabajos de mecanicos a domicilio, visita
+                                la pagina para mayor informacion.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <footer class="bg-dark p-2 text-center"> <!--INICIO DEL FOOTER-->
+        <div class="container">
+            <p class="text-white">Todos los Derechos reservados</p>
+        </div>
+    </footer> <!--FIN DEL FOOTER-->
+    {% block content %}
+{% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

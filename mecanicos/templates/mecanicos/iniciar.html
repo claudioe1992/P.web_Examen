@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block Exito %}{% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="iniciar.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/iniciar.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="avatar">
+            <img src="{% static 'img/logo.jpeg' %}" alt=""/>
+        </div>
+        <div class="content">
+            <h1>Taller Rayo McQueen</h1>
+            <p>Servicio de Mecanicos</p>
+        </div>
+        <form>
+            <label for="Usuario">Correo Electrónico</label>
+            <input type="text" placeholder="Correo electrónico" id="Usuario">
+            <br>
+            <br>
+            <label for="Contraseña">Contraseña</label>
+            <input type="password" placeholder="Contraseña" id="Contraseña">
+            <br>
+            <input type="button" value="Iniciar Sesión" onclick="InicioSesion()">
+            <br>
+            <center><a href="formulario.html">Crear Cuenta</a></center>
+        </form>
+    </div>
+    
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+            <p class="text-dark">Todos los Derechos reservados</p>
+        </div>
+    </footer>
+    {% block content %}
+{% endblock %}
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="{% static 'js/iniciar.js' %}"></script>
+    
+</body>
+</html>

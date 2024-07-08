@@ -1,0 +1,79 @@
+{% extends 'mecanicos/principal.html' %}
+{% block title %} Editar Mecanicos {% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            {% if mecanico %}
+
+            <h2 class="text-center mb-4">Formulario CRUD de Mecanicos</h2>
+
+            <form action="{% url 'mecanicosUpdate' %}" method="POST">
+                {% csrf_token %}
+
+                <!-- Campos para ingresar -->
+                <div class="mb-3">
+                    <label class="form-label">Rut:</label>
+                    <input type="text" name="rut" value="{{mecanico.rut}}" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nombre:</label>
+                    <input type="text" name="nombre" value="{{mecanico.nombre}}" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Apellido Paterno:</label>
+                    <input type="text" name="paterno" value="{{mecanico.apellido_paterno}}" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Apellido Materno:</label>
+                    <input type="text" name="materno" value="{{mecanico.apellido_materno}}" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Fecha Nacimiento:</label>
+                    <input type="date" name="fechaNac" value="{{mecanico.fecha_nacimiento}}" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Género:</label>
+                    <select name="genero" class="form-select">
+                        {% for genero in generos %}
+                        {% if genero.genero == mecanico.id_genero.genero %}
+                        <option value="{{ genero.id_genero }}" selected>{{ genero.genero }}</option>
+                        {% else %}
+                        <option value="{{ genero.id_genero }}">{{ genero.genero }}</option>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Celular:</label>
+                    <input type="text" name="telefono" value="{{mecanico.telefono}}" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email:</label>
+                    <input type="email" name="email" value="{{mecanico.email}}" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Dirección:</label>
+                    <input type="text" name="direccion" value="{{mecanico.direccion}}" class="form-control" required>
+                </div>
+
+                <!-- Botón de envío -->
+                <input type="submit" name="opcion" value="Actualizar" class="btn btn-primary">
+                <a href="{% url 'crud' %}" class="btn btn-secondary">Volver</a>
+            </form>
+            <br>
+            {% endif %}
+            <div id="idMensajes">
+                {% if mensaje %}
+                {{mensaje}}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+{% endblock %}

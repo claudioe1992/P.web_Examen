@@ -1,0 +1,26 @@
+{% extends 'mecanicos/principal.html' %}
+{% block title %} Añadir Especialidad {% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center mb-4">Formulario CRUD de Mecanicos</h2>
+                <form action="" method="POST">
+                    {% csrf_token %}
+
+                    {{ form.as_table }}
+
+                    <!-- Botón de envío -->
+                    <input type="submit" name="opcion" value="Agregar" class="btn btn-primary">
+                    <a href="{% url 'crud_generos' %}" class="btn btn-secondary">Volver</a>
+                </form>
+                <br>
+                
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+{% endblock %}

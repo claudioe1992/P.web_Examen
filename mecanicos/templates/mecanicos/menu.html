@@ -1,0 +1,465 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block Exito %}{% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/principal.css' %}">
+
+</head>
+<body>
+    <!---COMIENZO DEL NAVBAR (5 BOTONES)-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand"><span class="text-danger">Taller Rayo</span> McQueen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-start"
+                aria-controls="navbar-start" aria-expanded="false" aria-label="Toggle navigator">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-start">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda</a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login'%}">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!---FIN DEL NAVBAR-->
+
+    <!---COMIENZO DEL CAROUSEL (3 SLIDES)-->
+    <!--Llamado a la funcion de Bootstrap: "data-bs-ride" que inicia el carousel automaticamente al abrir la página-->
+    <!--Llamado a la funcion de Bootstrap: "data-bs-target" que se vincula un identificador(#carouselE1) unico asociado a un componente interactivo-->
+    <!--Llamado a la funcion de Bootstrap: "data-bs-slide-to=" que inicia el carousel en la diapositiva señalada, al ser la 1era inica en "0"-->
+
+    <div id="carouselE1" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselE1" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselE1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselE1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/trabajo1.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h5>Mantencion Caja de Cambio</h5>
+                    <p>
+                        Una de nuestras grandes virtudes como equipo de mecanicos, es nuestra experiencia
+                        reparando y trabajando con motores importados en todo el mundo.
+                    </p>
+                    <p><a href="trabajo1.html" class="btn btn-warning mt-3">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/trabajo2.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h5>Instalacion Motor NAVSTAR</h5>
+                    <p>
+                        Ultimo trabajo realizado, reparacion e intercambio de caja de
+                        cambio en automovil Lamborghini Gallardo. La reparacion fue realizada
+                        en nuestra Sede de Viña del Mar durante toda la jornada
+                    </p>
+                    <p><a href="trabajo2.html" class="btn btn-warning mt-3">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/trabajo3.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h5> Cambio Suspension y Llantas </h5>
+                    <p>
+                        Trabajo de instalacion de motor importado para automovil
+                        Bentley. El cliente en ese entonces solicitó el
+                        servicio de mecanicos a domicilio.
+                    </p>
+                    <p><a href="trabajo3.html" class="btn btn-warning mt-3">Leer Más</a></p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselE1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselE1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!---FIN DEL CAROUSEL-->
+    <!---INICIO DE LAS CARDS Parte 1 | (3 EN TOTAL)  Por lo que se repite 3 veces el mismo codigo, guiarse por el número en el nombre de las imágenes)-->
+    <!--SINTAXIS DE REFERENCIA: <div class="card text-white text-center [bg-car1] pb-2"> | car1 es la imagen de la CARD-->
+    <h1>Bievenido Martín! ¿En que podemos ayudarte?</h2>
+    <br>
+    <br>
+    <hr>
+    <br>
+        <div class="container">
+        <div class="avatar">
+            <a href="#">
+                <img src="img/cotiza3.jpg" alt="logo cotizaciones" />
+            </a>
+        </div>
+        <div class="content">
+            <br>
+            <br>
+            <center>
+                <h1>Cotizaciones</h1>
+            </center>
+            <center>
+                <h4>Ya eres Cliente registrado!</h4>
+                <p>Presiona el Icono</p>
+            </center>
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <section class="services">
+        <div class="container">
+            <div class="row">
+                <h1>Ultimos trabajados realizados</h1>
+                <br>
+                <br>
+                <br>
+                <!--1° CARD-->
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="card text-white text-center bg-car1 pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Mantencion Caja de Cambio</h3>
+                            <p>
+                                En nuestro taller mecánico, nos especializamos en diagnósticos y reparaciones de
+                                sistemas electrónicos para vehículos.
+                                Desde el control de la inyección de combustible hasta la gestión de la computadora a
+                                bordo, estamos equipados para abordar todos sus problemas
+                            </p>
+                            <button class="btn bg-warning text-dark"><a href="trabajo1.html" class="text-dark">Leer
+                                    Más</a></button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--2°CARD-->
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="card text-white text-center bg-car2 pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Instalacion Motor NAVSTAR y cambio de aceite</h3>
+                            <p>
+                                Las cajas de cambio automáticas son una parte integral de la experiencia de conducción
+                                de muchos vehículos modernos.
+                                En nuestro taller, ofrecemos servicios de mantenimiento y reparación de cajas de cambio
+                                automáticas para garantizar cambios suaves y eficientes.
+
+                            </p>
+                            <button class="btn bg-warning text-dark"><a href="trabajo2.html" class="text-dark">Leer
+                                    Más</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--3°CARD-->
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="card text-white text-center bg-car3 pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Cambio de Suspension y Llantas</h3>
+                            <p>
+                                La suspensión y dirección son componentes críticos para el manejo y la seguridad de tu
+                                vehículo. En nuestro taller, ofrecemos servicios de ajuste, reparación y mantenimiento
+                                de suspensión y dirección para garantizar un viaje suave y seguro.
+                            </p>
+                            <button class="btn bg-warning text-dark"><a href="trabajo3.html" class="text-dark">Leer
+                                    Más</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FIN DE LAS CARDS | Parte 1-->
+
+    <!--INICIO DE CARDS | Parte 2 (8 EN TOTAL) Por lo que el código se repite 8 veces, guiarse por números junto a las fotos insertadas.-->
+    <!--Referecia de Sintaxis: <img src="img/pr1.png" alt=""> La Imagen pr1 llegará hasta pr8 -->
+    <section class="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="secction-header text-center pb-5">
+                        <h1>Ultimas Novedades de Productos</h1>
+                        <h5>¿Buscar uno en particular?</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!--CARD N°1-->
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="img/pr1.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"> Llantas Brembo </h5>
+                            <p>
+                                Nuestras llantas Brembo ofrecen un rendimiento excepcional en la carretera y la pista.
+                                Diseñadas con tecnología de vanguardia y materiales de alta calidad, proporcionan un
+                                agarre superior y una respuesta precisa en cualquier condición.
+                            </p>
+                            <a href="#" class="btn-danger">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD N°2-->
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="img/pr2.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"> Llantas O.Z </h5>
+                            <p>
+                                Nuestras llantas O.Z ofrecen un rendimiento excepcional en la carretera y la pista.
+                                Diseñadas con tecnología de vanguardia y materiales de alta calidad, proporcionan un
+                                agarre superior y una respuesta precisa en cualquier condición.
+                            </p>
+                            <a href="#" class="btn-danger">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CARD N°3-->
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="img/pr3.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Volante SS</h5>
+                            <p>
+                                Nuestras volante SS ofrecen un rendimiento excepcional en la carretera y la pista.
+                                Diseñadas con tecnología de vanguardia y materiales de alta calidad, proporcionan un
+                                agarre superior y una respuesta precisa en cualquier condición.
+                            </p>
+                            <a href="#" class="btn-danger">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CARD N°4-->
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="img/pr4.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Motor NAVISTAR</h5>
+                            <p>
+                                El motor Navistar es un símbolo de potencia y confiabilidad en la industria automotriz.
+                                Diseñado con tecnología de punta y años de experiencia en ingeniería, este motor ofrece
+                                un rendimiento excepcional en términos de potencia.
+                            </p>
+                            <a href="#" class="btn-danger">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CARD N°5-->
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="img/pr5.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Llantas RAYZ</h5>
+                            <p>
+                                Nuestras llantas RAYZ ofrecen un rendimiento excepcional en la carretera y la pista.
+                                Diseñadas con tecnología de vanguardia y materiales de alta calidad, proporcionan un
+                                agarre superior y una respuesta precisa en cualquier condición.
+                            </p>
+                            <a href="#" class="btn-danger">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CARD N°6-->
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="img/pr6.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Herramientas</h5>
+                            <p>
+                                Nuestra herramienta es una solución integral para tus necesidades de mantenimiento y
+                                reparación vehicular. Con una interfaz intuitiva y funciones avanzadas, nuestra
+                                herramienta simplifica el proceso de diagnóstico.
+                            </p>
+                            <a href="#" class="btn-danger">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CARD N°7-->
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="img/pr7.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Llantas Toyo-Tires</h5>
+                            <p>
+                                Nuestras llantas TT ofrecen un rendimiento excepcional en la carretera y la pista.
+                                Diseñadas con tecnología de vanguardia y materiales de alta calidad, proporcionan un
+                                agarre superior y una respuesta precisa en cualquier condición.
+                            </p>
+                            <a href="#" class="btn-danger">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CARD N°8-->
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="img/pr8.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Llantas ENKEI</h5>
+                            <p>
+                                Nuestras llantas ENKEI ofrecen un rendimiento excepcional en la carretera y la pista.
+                                Diseñadas con tecnología de vanguardia y materiales de alta calidad, proporcionan un
+                                agarre superior y una respuesta precisa en cualquier condición.
+                            </p>
+                            <a href="#" class="btn-danger">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---FIN DE LAS CARDS--->
+
+    <!--INICIO DEL BANNER-->
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Las Mejores Piezas para tu Auto</h2>
+                    <p>
+                        La mayoria de los productos de nuestra tienda son exportados
+                        desde el extrangero, en donde tenemos convenios con distintas
+                        tiendas de países como Alemania, Francia e Italia. Aprovecha, y
+                        visita nuestras tiendas y todas las sede alrededor del país.
+                    </p>
+                    <br>
+                    <div>
+                        <img src="img/mo1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FIN DEL BANNER-->
+
+    <!--ATAJO CONTACTO-->
+    <section class="contact">
+        <div class="container mb-3 mb-lg-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="secction-header text-center pb-2 pb-lg-5">
+                        <h2>¿Tienes alguna pregunta?</h2>
+                        <br>
+                        <p>
+                            Para cualquier consulta, reclamo o sugerencia
+                            puedes rellenar este formulario con tus datos,
+                            se enviará la respuesta a tu solicitud al cabo
+                            de 7 días como máximo. Si deseas otra cosa, como
+                            comprar productos de nuestra tienda, revisar nuestro
+                            trabajo como mecanicos o solicitar algun servicio a
+                            domicilio, por favor registrate o ingresa en nuestro Portal
+                            de la pagina.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="col-12 col-md-12 col-lg-6 pt-4 pb-4">
+                    <form action="#" class="bg-light p-4 m-auto shadow-sm">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input class="form-control" placeholder="Nombre" type="text" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input class="form-control" placeholder="Email" type="email" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <textarea class="form-control" placeholder="Mensaje" rows="3" required></textarea>
+                                </div>
+                            </div>
+                            <button class="btn btn-warning btn-lg btn-block mt-3" type="button"> Enviar </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FIN ATAJO CONTACTO-->
+    <!--COMIENZO DEL FOOTER-->
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+            <p class="text-white">Todos los Derechos reservados</p>
+        </div>
+    </footer>
+    {% block content %}
+{% endblock %}
+    <!--FIN DEL FOOTER-->
+
+    <!--LINK Bootstrap | JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</body>
+
+</html>

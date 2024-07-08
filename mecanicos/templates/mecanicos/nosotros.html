@@ -1,0 +1,326 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block Mecanicos %}{% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="nosotros.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nosotros.css' %}">
+
+</head>
+<body> <!--INICIO DEL NAVBAR, DISEÑO DISTINTO AL INDEX-->
+    <header>
+        <div class="logo">
+            <a href="principal.html" class="logo">
+                <img src="{% static 'img\logo.jpeg' %}" alt="taller rayo maken">
+            </a>
+            <h3> ¿Quienes Somos? </h3>
+        </div>
+    
+    </header>
+    <div class="menu bg-dark">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="formulario.html">Registrate</a>
+        <div class="search-container">
+            <form action="/buscar">
+              <input type="text" placeholder="Buscar..." name="buscar">
+              <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
+    <!--FIN DEL NAVBAR, DISEÑO DISTINTO AL INDEX-->
+
+    <!--INICIO DEL CAROUSEL-->
+    <div id="carouselE1" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselE1" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+
+            <button type="button" data-bs-target="#carouselE1" data-bs-slide-to="1" class="active"
+                aria-label="Slide 2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'img/mec1.jpg' %}" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h5> Contamos con un amplio equipo de Mecanicos </h5>
+                    <p>
+                        Cada sucursal cuenta con un amplio equipo experimentado de mecanicos,
+                        listos para realizar y solucionar cualquier de mantencion o reparacion
+                        para tu vehiculo.
+                    </p>
+                    <p><a href="#" class="btn btn-primary mt-3">Leer Mas</a></p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'img/taller2.jpg' %}" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h5> Servicios y Productos de primera calidad </h5>
+                    <p>
+                        La experencia de nuestro equipo es nuestra principal virtud, de modo que ofrecemos
+                        servicios vinculados a diferentes especialidades de la mecanica. Además ofrecemos diversos
+                        productos para tu vehiculos importados desde Alemania.
+                    </p>
+                    <p><a href="#" class="btn btn-primary mt-3">Leer Mas</a></p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselE1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselE1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+     <!--FIN DEL CAROUSEL-->
+    <br>
+    <br>
+    <section class="section-icons">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-12 col-lg-4 box-icons">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-airplane"></i>
+                        <div class="ms-4">
+                            <h3> Sucursales </h3>
+                            <p>
+                                Nuestro taller de mecanicos cuenta con más de
+                                diez sucursales alrededor del país, cada taller
+                                cuenta con el personal capacitado y experimentado
+                                en las distintas áreas de la mecanica.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4 box-icons">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-cash-coin"></i>
+                        <div class="ms-4">
+                            <h3> Experiencia</h3>
+                            <p>
+                                Más de 15 años trabajando en el rubro de la mecanica,
+                                es nuestra mayor virtud como equipo de mecanicos. Además,
+                                contamos con una amplia experencia en el mercado de piezas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4 box-icons">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-gift-fill"></i>
+                        <div class="ms-4">
+                            <h3> Servicios Extra </h3>
+                            <p>
+                                Además de realizar trabajos de mecanica abarcandos distintas
+                                especialidades, contamos con un servicio de mecanicos a domicilio,
+                                vive la experiencia y solicita nuestros servicios!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="secction-header text-center pb-5">
+                        
+                        <h2><i class="bi bi-ev-front-fill"></i> Sucursales </h2>
+                        <br>
+                        <h5>
+                            Te presentamos nuestras sucursales!
+                        </h5>
+                    </div>
+                </div>
+            </div>
+<!--INICIO DE LAS CARDS-->
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src={% static "img/mec2.png" %} alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"> Quilpue </h5>
+                            <p>
+                                Situado en el centro de la ciudad, ofrecemos servicios de reparación y mantenimiento para vehículos de todas las marcas.
+                                Con herramientas de última generación y un equipo altamente capacitado, estamos listos para atender tus necesidades.
+                            </p>
+                            <a href="#" class="btn btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img\mec2.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"> Viña del Mar </h5>
+                            <p>
+                                Reconocido por profesionalismo y atención al cliente, brindamos servicios de reparación y mantenimiento en una ubicación accesible.
+                                Nuestro equipo se compromete a soluciones rápidas y efectivas para mantener tu vehículo en óptimas condiciones.
+                            </p>
+                            <a href="#" class="btn btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/mec2.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"> Las Condes</h5>
+                            <p>
+                                Estratégicamente ubicado, contamos con instalaciones modernas y equipos de vanguardia para garantizar un servicio de primera categoría.
+                                Desde mantenimiento preventivo hasta reparaciones especializadas de mayor nivel para tu vehiculo.
+                            </p>
+                            <a href="#" class="btn btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/mec2.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"> Providencia </h5>
+                            <p>
+                                Con una ubicación céntrica, ofrecemos comodidad y accesibilidad para todos nuestros clientes. 
+                                Nuestro equipo de técnicos altamente capacitados y listo para brindar diferentes soluciones 
+                                efectivas de primer nivel para tu vehiculo. Visitanos!
+                            </p>
+                            <a href="#" class="btn btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/mec2.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"> Quillota </h5>
+                            <p>
+                                Reconocidos por nuestra excelencia en el servicio, ofrecemos soluciones confiables para propietarios de vehículos.
+                                Desde cambios de aceite hasta reparaciones complejas, estamos comprometidos con la calidad.
+                            </p>
+                            <a href="#" class="btn btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/mec2.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"> San Joaquin </h5>
+                            <p>
+                                Situado en un lugar conveniente, ofrecemos servicios de reparación y mantenimiento para todo tipo de vehículos.
+                                Con un enfoque en la eficiencia y la confiabilidad, estamos listos para resolver!
+                            </p>
+                            <a href="#" class="btn btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/mec2.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"> Villa Alemana </h5>
+                            <p>
+                                Ubicado en una zona privilegiada, ofrecemos servicios de primera clase para propietarios de vehículos exigentes.
+                                Nuestro equipo de técnicos certificados se esfuerza por superar tus expectativas en cada visita.
+                            </p>
+                            <a href="#" class="btn btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                        <div class="text-center">
+                            <img src="{% static 'img/mec2.png' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"> Vitacura </h5>
+                            <p>
+                                Ubicado en una zona privilegiada, ofrecemos servicios de primera clase para propietarios de vehículos exigentes.
+                                Nuestro equipo de técnicos certificados se esfuerza por superar tus expectativas en cada visita.
+                            </p>
+                            <a href="#" class="btn btn-primary">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FIN DE LAS CARDS-->
+    <!--INICIO DEL BANNER-->
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2> Servicio de Mecanicos a Domicilio </h2>
+                    <p>
+                        Para solicitar los servicios de mecanica a domicilio, debes estar registrado
+                        en nuestro portal como cliente. Y acceder a la seccion de servicios, existe la opcion
+                        para cotizar valores que dependerán de la ubicación en la que se encuentre tu domicilio.
+                        El valor del servicio irá aumentando acorde a la especialidad que se quiera trabajar y la cantidad
+                        de trabajos solicitados para realizar durante esa jornada.
+                    </p>
+                    <div>
+                        <img src="{% static 'img/mec3.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FIN DEL BANNER-->
+
+     <!--INICIO DEL FOOTER-->
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+            <p class="text-white">Todos los derechos reservados</p>
+        </div>
+    </footer>
+    {% block content %}
+{% endblock %}
+    <!--FIN DEL FOOTER-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>

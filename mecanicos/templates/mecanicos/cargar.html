@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando...</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cargar.css' %}">
+</head>
+<body>
+    <div id="container">
+        <div id="html-spinner"></div>
+        <center><p id="html-para">Iniciando Sesión...</p></center>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="{% static 'js/cargar.js' %}"></script>
+</body>
+</html>

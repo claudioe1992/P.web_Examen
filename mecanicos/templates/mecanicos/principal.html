@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Taller Mecanico McQueen - Seccion Administracion {% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/tienda.css' %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <style>
+        body {
+            background-color: #f7e3c0;
+        }
+
+        a {
+            color: blue
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/pr3.png' %}" alt="Icon" width="30" height="30" class="d-inline-block align-text-top">
+                Taller Mecanico McQueen - Seccion Administracion
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'principal' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'crud' %}">Listar Mecanicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'crud_generos' %}">Listar Géneros</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trabajo1.html">Trabajos Realizados</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Aquí puedes incluir el bloque de contenido principal -->
+    <main class="flex-grow-1">
+        <div class="header-content container">
+            <div class="header-img">
+                <img src="{% static 'img/logo.jpeg' %}" alt="">
+            </div>
+            <div class="header-txt">
+                <h1>Registros</h1>
+                <p>Mecanicos y Trabajos</p>
+                <a href="#" class="btn-1">Más Información</a>
+            </div>
+        </div>
+
+        {% block content %}
+        <!-- Aquí es donde se mostrarán tus formularios -->
+        {% endblock %}
+    </main>
+    
+    <footer class="bg-dark text-white mt-auto">
+        <div class="container py-3">
+            <h5 class="text-center mb-0">©2024 Taller Mecanico McQueen - Todos los Derechos Reservados</h5>
+        </div>
+    </footer>
+</body>
+</html>
